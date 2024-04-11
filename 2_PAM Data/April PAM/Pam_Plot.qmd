@@ -74,7 +74,9 @@ ggsave("APR_2023_PAM_Plot_bylocation_V2.pdf", width = 8, height = 6, units = "in
 ```{r}
 mod1 <- lm(avg ~ location, data = disPAM)
 
+pdf("Verification.pdf", width = 8, height = 6)
 plot(mod1)
+dev.off()
 
 
 summary(mod1)
